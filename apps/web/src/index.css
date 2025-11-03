@@ -1,0 +1,342 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  /* 笔记本 */
+  --breakpoint-nb: 1366px;
+  /* 显示器 */
+  --breakpoint-hd: 1920px;
+  /* 中文文章标题 */
+  --font-ZCOOL: "ZCOOL XiaoWei", sans-serif;
+  /* 英文文章标题 */
+  --font-YWZCOOL: "Edu NSW ACT Hand Pre", cursive;
+  /* 中文文章条目 */
+  --font-KuaiLe: "ZCOOL KuaiLe", sans-serif;
+  /* 副标题 */
+  --font-NotoSansTC: "Noto Sans TC", sans-serif;
+  /* 数字 */
+  --font-Audiowide: "Audiowide", sans-serif;
+  /* 游戏像素风格 中文字体 */
+  --font-DotGothic16: "DotGothic16", sans-serif;
+  /* 游戏像素风格 英文字体 */
+  --font-Pixelify: "Pixelify Sans", sans-serif;
+}
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  /* 顶部导航主题色 */
+  --color-customGray: var(--customGray);
+  --color-customGrayCl: var(--customGrayCl);
+  /* 顶部导航2主题色 */
+  --color-headerColorF: var(--headerColorF);
+  /* 顶部标题附栏文字颜色 */
+  --color-mysidebar: var(--mysidebar);
+  /* 主内容区域主题色 */
+  --color-main: var(--main);
+  /* 标题左边框颜色 */
+  --color-bl: var(--bl);
+  /* 日期时间 小标题 颜色 */
+  --color-dateCl: var(--dateCl);
+  /* 时间线内容区背景 */
+  --color-Timeline: var(--Timeline);
+  /* 编辑器 编程语言 标题颜色 */
+  --color-EditorTl: var(--EditorTl);
+  /* 编辑器 编程语言 颜色 */
+  --color-EditorCl: var(--EditorCl);
+  /* 动画背景 Animated background */
+  --color-animatedBg-1: var(--animatedBg-1);
+  --color-animatedBg-2: var(--animatedBg-2);
+  --color-animatedBg-3: var(--animatedBg-3);
+  /* 侧边条背景颜色 */
+  --color-toolbar: var(--toolbar);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.625rem;
+  /* --customGray: #3c3c3c; */
+  --customGray: #f5f5f5;
+  --customGrayCl: #000000;
+  --headerColorF: #ffffff;
+  --mysidebar: #898989;
+  --main: #e8e8e8;
+  --bl: #000000;
+  --dateCl: #8a8a8a;
+  --Timeline: #f1f1f1;
+  --EditorTl: #000000;
+  --EditorCl: #000000;
+  --animatedBg-1: #FF4500;
+  --animatedBg-2: #FFE4B5;
+  --animatedBg-3: #FFFF77;
+  --toolbar: #FFFF77;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --customGray: #1b1d20;
+  --customGrayCl: #ffffff;
+  --headerColorF: #454545;
+  --mysidebar: #898989;
+  --main: #101213;
+  --bl: #ffffff;
+  --dateCl: #8a8a8a;
+  --Timeline: #1b1d20;
+  --EditorTl: #ffdc00;
+  --EditorCl: #D87093;
+  --animatedBg-1: #3b82f6;
+  --animatedBg-2: #f9a8d4;
+  --animatedBg-3: #f87171;
+  --toolbar: #000000;
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+.text {
+  position: absolute;
+  z-index: 9999999;
+  font-weight: bold;
+  user-select: none;
+}
+
+@keyframes remove {
+  100% {
+    opacity: 0;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* 賞 動畫 */
+@layer utilities {
+  @keyframes heartbeat {
+
+    0%,
+    100% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.2);
+    }
+  }
+
+  .animate-heartbeat {
+    animation: heartbeat 2s infinite ease-in-out;
+  }
+
+  .animate-heartbeat-slow {
+    animation: heartbeat 4s infinite ease-in-out;
+  }
+
+  .animate-heartbeat-fast {
+    animation: heartbeat 0.5s infinite ease-in-out;
+  }
+
+  /* 客服小主图片 */
+  .bg-local-banner {
+    background-image: url('/src//assets/Toolbar/客服.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* 音乐 */
+  .bg-local-music {
+    background-image: url('/src//assets/Toolbar/黑胶音乐.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* 全屏 */
+  .bg-local-full-screen {
+    background-image: url('/src//assets/Toolbar/全屏幕.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* 置顶 */
+  .bg-local-top {
+    background-image: url('/src//assets/Toolbar/置顶.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* 初遇 */
+  .bg-local-chuyu {
+    background-image: url('/src//assets/header/初遇.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* 文章 */
+  .bg-local-wenzhang {
+    background-image: url('/src//assets/header/文章.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* 风景 */
+  .bg-local-fengjing {
+    background-image: url('/src//assets/header/风景.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* 美食 */
+  .bg-local-meishi {
+    background-image: url('/src//assets/header/美食.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* 梦境 */
+  .bg-local-mengjing {
+    background-image: url('/src//assets/header/梦境.png');
+    background-size: cover;
+    background-position: center;
+  }
+  /* QQ农场 */
+  .bg-qq-farm {
+    background-image: url('/src//assets/game/QQFarm/farm.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+/* H5活动页 */
+
+#zxl {
+  height: 100%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

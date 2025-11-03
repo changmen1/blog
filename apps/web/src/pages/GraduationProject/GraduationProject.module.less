@@ -1,0 +1,167 @@
+.autiobtn {
+    position: absolute;
+    right: 20px;
+    top: 7%;
+    z-index: 200;
+    width: 30px;
+    height: 30px;
+    background-image: url(../../assets/h5/weddingInvitations/normalmusic.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.rotate {
+    -webkit-animation: rotating 1.2s linear infinite;
+    -moz-animation: rotating 1.2s linear infinite;
+    -o-animation: rotating 1.2s linear infinite;
+    animation: rotating 1.2s linear infinite;
+}
+
+@-webkit-keyframes rotating {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+//TODO ==================活动页1==================
+.logo {
+    opacity: 0;
+    top: 7%;
+    width: 36%;
+    left: 32%;
+    position: absolute;
+}
+
+.slide-move .logo {
+    opacity: 1;
+    -webkit-transition: all 1s ease-in;
+}
+
+.one-slide-1 {
+    opacity: 0;
+    top: 60%;
+    width: 70%;
+    left: 15%;
+    position: absolute;
+}
+
+.slide-move .one-slide-1 {
+    opacity: 1;
+    -webkit-transition: all 1s ease-in;
+}
+
+//TODO ==================活动页2==================
+.two-slide-1 {
+    opacity: 0;
+    margin-top: 67%;
+    margin-left: 10%;
+    width: 53%;
+}
+
+.two-slide-2 {
+    opacity: 0;
+    margin-top: 0;
+    width: 80%;
+    margin-left: 10%
+}
+
+.slide-move .two-slide-1 {
+    opacity: 1;
+    -webkit-transition: all 0.5s ease-in;
+}
+
+.slide-move .two-slide-2 {
+    opacity: 1;
+    -webkit-transition: all 0.5s ease-in 0.6s;
+}
+
+//TODO ==================活动页3==================
+
+.three-slide-1 {
+    opacity: 0;
+    top: 42%;
+    width: 100%;
+    position: absolute;
+}
+
+.slide-move .three-slide-1 {
+    opacity: 1;
+    -webkit-transition: all 0.5s ease-in;
+}
+
+.orange {
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    color: #ff8903;
+    font-weight: 800;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 3px;
+}
+
+.three-slide-2 {
+    opacity: 0;
+    top: 66%;
+    width: 10%;
+    left: 45%;
+    position: absolute;
+}
+
+.slide-move .three-slide-2 {
+    opacity: 1;
+    width: 24%;
+    left: 38%;
+    -webkit-transition: width 0.5s ease-in 0.8s, left 0.5s ease-in 0.8s, opacity 0.01s ease-in 0.8s;
+}
+
+.desc {
+    font-size: 15px;
+    width: 100%;
+    font-weight: 800;
+    text-align: left;
+    color: #cccccc;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+}
+
+//TODO ==================滑动标签==================
+@-webkit-keyframes passdown {
+    0% {
+        bottom: 5%;
+    }
+
+    50% {
+        bottom: 3.2%;
+    }
+
+    100% {
+        bottom: 5%;
+    }
+}
+
+.pub-passdown {
+    position: absolute;
+    width: 10%;
+    left: 45%;
+    bottom: 4%;
+    -webkit-animation-name: passdown;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-duration: 0.8s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+// TODO ==================微信分享==================
+.vx {
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../assets/h5/weddingInvitations/share.png);
+}
