@@ -6,6 +6,7 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev --port 3002",
+    "cv": "next dev --port 3002",
     "start": "next start"
   },
   "dependencies": {
