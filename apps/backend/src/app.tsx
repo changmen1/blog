@@ -1,15 +1,13 @@
+import { AvatarDropdown, AvatarName, Question, SelectLang } from '@/components';
 import type { Settings as LayoutSettings } from '@ant-design/pro-components';
-import { SettingDrawer } from '@ant-design/pro-components';
+import '@ant-design/v5-patch-for-react-19';
 import type { RequestConfig, RunTimeLayoutConfig } from '@umijs/max';
 import { history } from '@umijs/max';
-import { AvatarDropdown, AvatarName, Question, SelectLang } from '@/components';
 import defaultSettings from '../config/defaultSettings';
-import { errorConfig } from './requestErrorConfig';
-import '@ant-design/v5-patch-for-react-19';
-import React, { type JSX } from 'react';
 import routers from '../config/routes';
 import SwitchTabsLayout from './components/SwitchTabsLayout';
 import { getUserInfo } from './pages/user/login/service';
+import { errorConfig } from './requestErrorConfig';
 
 const isDev = process.env.NODE_ENV === 'development';
 const loginPath = '/user/login';

@@ -8,7 +8,7 @@ const RentalAgreementA4 = () => {
                 <div className="font-bold mt-[500px] w-fit mx-auto text-left">
                     <p className="mb-2">甲方（出租人）：郑博文</p>
                     <p className="mb-2">乙方（承租人）：朱昕龙</p>
-                    <p className="mb-6">签订日期：2024 年 11 月 10 日</p>
+                    <p className="mb-6">签订日期：2025 年 11 月 10 日</p>
                 </div>
                 <p className="absolute bottom-5 right-0 left-0 text-center text-sm">-- 第 1 页 共 2 页 --</p>
             </div>
@@ -22,7 +22,7 @@ const RentalAgreementA4 = () => {
                         <br />  <span>甲方提供设施有：<span className="border-b border-gray-400 h-6 w-64 mt-2">燃气灶，洗衣机，燃气热水器，空调</span></span>
                     </li>
                     <li>
-                        租赁期共 <span className="border-b border-gray-400 h-6 w-64 mt-2">12</span> 个月，从 <span className="border-b border-gray-400 h-6 w-64 mt-2">2024</span> 年<span className="border-b border-gray-400 h-6 w-64 mt-2">11</span> 月 <span className="border-b border-gray-400 h-6 w-64 mt-2">10</span>日起至 <span className="border-b border-gray-400 h-6 w-64 mt-2">2025</span> 年 <span className="border-b border-gray-400 h-6 w-64 mt-2">11</span> 月<span className="border-b border-gray-400 h-6 w-64 mt-2">10</span> 日止。
+                        租赁期共 <span className="border-b border-gray-400 h-6 w-64 mt-2">24</span> 个月，从 <span className="border-b border-gray-400 h-6 w-64 mt-2">2025</span> 年<span className="border-b border-gray-400 h-6 w-64 mt-2">11</span> 月 <span className="border-b border-gray-400 h-6 w-64 mt-2">10</span>日起至 <span className="border-b border-gray-400 h-6 w-64 mt-2">2027</span> 年 <span className="border-b border-gray-400 h-6 w-64 mt-2">11</span> 月<span className="border-b border-gray-400 h-6 w-64 mt-2">10</span> 日止。
 
                     </li>
                     <li>该房屋租金为人民币<span className="border-b border-gray-400 h-6 w-64 mt-2">壹仟</span>圆整（¥<span className="border-b border-gray-400 h-6 w-64 mt-2">1000</span>）。</li>
@@ -59,7 +59,7 @@ const RentalAgreementA4 = () => {
                 </div>
 
                 <div className="text-right mt-8">
-                    <p>签署日期：2024 年 11 月 10 日</p>
+                    <p>签署日期：2025 年 11 月 10 日</p>
                 </div>
 
                 <p className="absolute bottom-5 right-0 left-0 text-center text-sm">--第 2 页 共 2 页 --</p>

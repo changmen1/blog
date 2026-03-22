@@ -1,11 +1,11 @@
-import { FC, useEffect, useState } from "react";
+import { SendOutlined } from "@ant-design/icons";
+import { Button, Flex, Input, message } from "antd";
 import MarkdownIt from 'markdown-it';
+import { FC, useEffect, useState } from "react";
 import MdEditor, { Plugins } from 'react-markdown-editor-lite';
 import 'react-markdown-editor-lite/lib/index.css';
-import { Button, Flex, Input, message } from "antd";
-import { getInsertImage, SaveMd } from "./service";
-import { SendOutlined } from "@ant-design/icons";
 import { updateBlog } from "../ManageBlog/service";
+import { getInsertImage, SaveMd } from "./service";
 
 // TODO https://github.com/HarryChen0506/react-markdown-editor-lite/blob/master/README.md
 // TODO https://harrychen0506.github.io/react-markdown-editor-lite/
@@ -38,6 +38,7 @@ const Markdown: FC<Props> = ({ mentity }) => {
   const handleImageUpload = async (file: File): Promise<string> => {
     const formData = new FormData();
     formData.append("file", file);
+    console.log('文件上传', file)
     try {
       const res = await getInsertImage(formData)
       return res.url;
